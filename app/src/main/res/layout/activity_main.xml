@@ -216,7 +216,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:id="@+id/nature"
+                android:id="@+id/truck"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
@@ -225,11 +225,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Nature"
+                    android:text="Truck"
 
                     android:paddingTop="60dp"
                     android:textColor="#80FFFFFF"
-                    android:background="@drawable/gradientnature"
+                    android:background="@drawable/gradienttruck"
                     android:gravity="center"
                     android:textSize="25sp"
                     android:textStyle="bold">
@@ -240,7 +240,7 @@
                     android:layout_height="75dp"
                     android:gravity="center"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/nature">
+                    android:src="@drawable/truck">
 
                 </ImageView>
 
@@ -249,7 +249,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:id="@+id/bus"
+                android:id="@+id/tranding"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
@@ -258,11 +258,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Bus"
+                    android:text="Tranding"
 
                     android:paddingTop="60dp"
                     android:textColor="#80FFFFFF"
-                    android:background="@drawable/gradientbus"
+                    android:background="@drawable/gradienttrending"
                     android:gravity="center"
                     android:textSize="25sp"
                     android:textStyle="bold">
@@ -273,7 +273,7 @@
                     android:layout_height="75dp"
                     android:gravity="center"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bus">
+                    android:src="@drawable/trending">
 
                 </ImageView>
 
