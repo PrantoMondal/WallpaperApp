@@ -48,6 +48,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -67,11 +68,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Nature"
+                    android:text="Bus"
 
                     android:paddingTop="60dp"
                     android:textColor="#80FFFFFF"
-                    android:background="@drawable/gradientnature"
+                    android:background="@drawable/gradientbus"
                     android:gravity="center"
                     android:textSize="25sp"
                     android:textStyle="bold">
@@ -288,5 +289,12 @@
 
     </LinearLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bottomLayout">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>
