@@ -19,7 +19,7 @@ public interface ApiInterface {
 
     @Headers("Authorization: "+API)
     @GET("search")
-    Call<SearchModel> getImage(
+    Call<SearchModel> getSearchImage(
             @Query("query") String query,
             @Query("page") int page,
             @Query("per_page") int per_page

@@ -14,6 +14,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<ImageModel> modelClassList;
@@ -113,10 +117,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getsearchimage(String query) {
+        ApiUtilities.getApiInterface().getSearchImage(query,1,80).enqueue(new Callback<SearchModel>() {
+            @Override
+            public void onResponse(Call<SearchModel> call, Response<SearchModel> response) {
+                modelClassList.clear();
+                if (response.isSuccessful()){
+                    modelClassList.addAll(response.body().getPhotos());
+                    adapter.notifyDataSetChanged();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Not able to get",Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<SearchModel> call, Throwable t) {
+
+            }
+        });
+
     }
 
     private void findPhotos() {
+        ApiUtilities.getApiInterface().getImage(1,80).enqueue(new Callback<SearchModel>() {
+            @Override
+            public void onResponse(Call<SearchModel> call, Response<SearchModel> response) {
+                if (response.isSuccessful()){
+                    modelClassList.addAll(response.body().getPhotos());
+                    adapter.notifyDataSetChanged();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Not able to get",Toast.LENGTH_SHORT).show();
+                }
 
+            }
+
+            @Override
+            public void onFailure(Call<SearchModel> call, Throwable t) {
+
+            }
+        });
 
     }
 }
