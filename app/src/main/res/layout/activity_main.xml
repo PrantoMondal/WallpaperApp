@@ -17,6 +17,7 @@
         android:layout_marginBottom="10dp"
         android:orientation="horizontal">
         <EditText
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/search_image"
@@ -237,7 +238,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="125dp"
                 android:layout_height="100dp"
-                android:id="@+id/tranding"
+                android:id="@+id/trending"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
